@@ -9,7 +9,17 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/index.js"
+      "dest": "src/index.js",
+      "methods": ["GET", "POST", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://youtube-channel-analyzer-flame.vercel.app",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type"
+      }
     }
-  ]
+  ],
+  "env": {
+    "YOUTUBE_API_KEY": "@youtube_api_key",
+    "CORS_ORIGIN": "https://youtube-channel-analyzer-flame.vercel.app"
+  }
 } 
