@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "src/index.js"
+    }
+  ],
+  "env": {
+    "PORT": "4001",
+    "MONGODB_URI": "@mongodb_uri",
+    "YOUTUBE_API_KEY": "@youtube_api_key",
+    "CORS_ORIGIN": "@cors_origin"
+  }
+} 
