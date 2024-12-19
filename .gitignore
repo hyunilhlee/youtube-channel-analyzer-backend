@@ -1,3 +1,16 @@
+# dependencies
 node_modules/
+package-lock.json
+yarn.lock
+
+# environment
 .env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# misc
 .DS_Store
+.vercel
+*.log
